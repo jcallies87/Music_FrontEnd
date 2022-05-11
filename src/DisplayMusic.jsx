@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
 
 const DisplayMusic = (props) => {
@@ -8,6 +8,7 @@ const DisplayMusic = (props) => {
     <table class= "table table-bordered">
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Title</th>
                 <th>Artist</th>
                 <th>Album</th>
@@ -19,6 +20,7 @@ const DisplayMusic = (props) => {
             {props.playlist.map((songs) => {
               return(
                 <tr>
+                    <td>{songs.id}</td>
                     <td>{songs.title}</td>
                     <td>{songs.artist}</td>
                     <td>{songs.album}</td>

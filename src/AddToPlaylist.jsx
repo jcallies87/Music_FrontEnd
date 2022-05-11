@@ -18,7 +18,7 @@ const CreatePost = (props) => {
             release_date: release_date,
             genre: genre
         }
-        props.createPost(newEntry)
+        props.addToPlaylist(newEntry)
     }
 return (
 <form onSubmit ={handleSubmit}>
@@ -30,7 +30,7 @@ return (
     <label for= "post">Album:</label>
     <input type= "textarea" onChange={(event) => setAlbum(event.target.value)}value={album}/>  
     <label for= "post">Release Date:</label>
-    <input type= "textarea" onChange={(event) => setReleaseDate(event.target.value)}value={release_date}/>
+    <input type= "date" onChange={(event) => setReleaseDate(event.target.value)}value={release_date}/>
     <label for= "post">Genre:</label>
     <input type= "textarea" onChange={(event) => setGenre(event.target.value)}value={genre}/>  
     <button type='submit'> Submit </button>
